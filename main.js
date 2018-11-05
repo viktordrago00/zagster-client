@@ -1,5 +1,5 @@
 $(updateView)
 
 function updateView() {
-    alert("I'm using jQuery! Weird flex but okay")
+    alert("Congratulations! You have won a new iPhone! Just input your SSN and credit card to claim your prize!")
 }
