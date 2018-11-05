@@ -1,5 +1,12 @@
+const BASE_URL = "https://zagster-service.herokuapp.com"
+
 $(updateView)
 
 function updateView() {
-    alert("Congratulations! You have won a new iPhone! Just input your SSN and credit card to claim your prize!")
+    $.getJSON(BASE_URL + "/rides/count", updateRideCount)   
+}
+
+function updateRideCount(data) {
+    numberOfRides = data.count
+    $("h2#rideCount").html(numberOfRides)
 }
