@@ -1,5 +1,5 @@
 $(updateView)
 
 function updateView() {
-    alert("Using jQuery!")
+    alert("I'm using jQuery! Weird flex but okay")
 }
