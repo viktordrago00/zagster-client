@@ -11,12 +11,12 @@ function updateView() {
 function printData(data) {
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'pie',
         data: {
-            labels: ["2016", "2017", "2018", "Fall", "Spring", "Summer"],
+            labels: ["2016", "2017", "2018"],
             datasets: [{
                 label: '# of Rides',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [ [data['2016']], [data['2017']], [data['2018']] ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
