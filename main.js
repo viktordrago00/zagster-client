@@ -6,8 +6,15 @@ $(updateView)
 
 function updateView() {
     $.getJSON( BASE_URL + "/rides/count", updateRideCount)
-    $.getJSON( BASE_URL + "/rides/count/per_month", grabData, printData)
-    $.getJSON( BASE_URL + "/rides/count/per_year", printData)
+    $.when(
+        $.getJSON( BASE_URL + "/rides/count/per_year", printData)
+    ).then(
+        $.when(
+        $.getJSON( BASE_URL + "/rides/count/per_month", grabData)
+    ).then(
+        printData
+        ));
+   
 }
 function grabData(data) {
     rideData = data;
