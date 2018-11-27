@@ -36,27 +36,17 @@ function printData(data) {
     data: {
         labels: ["9/16", "10/16", "11/16", "12/16", "1/17", "2/17", "3/17", "4/17", "5/17", "6/17", "7/17", "8/17", "9/17", "10/17", "11/17", "12/17", "1/18", "2/18", "3/18", "4/18", "5/18", "6/18", "7/18", "8/18", "9/18", "10/18", "2016", "2017", "2018"],
         datasets: [{
-            label: '# of Rides',
+            label: '# of Rides per month',
             data: rideMonth,
             backgroundColor: [  
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+             
             ],
             borderWidth: 1 
         }, {
-        labels: ["Total"],
+        labels: ["Total per year"],
             data: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0, [data['2016']], [data['2017']], [data['2018']] ],
         backgroundColor: [  
             'rgba(255, 99, 132, 0.2)',
@@ -80,6 +70,9 @@ function printData(data) {
         }],     
     },
     options: {
+        legend: {
+           display: false
+        },
         scales: {
             yAxes: [{
                 ticks: {
