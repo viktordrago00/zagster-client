@@ -34,7 +34,7 @@ function printData(data) {
     var myChart = new Chart(ctx, {
         type: 'pie',
     data: {
-        labels: ["2016", "2017", "2018"],
+        labels: ["2016", "2017", "2018", "Total Count"],
         datasets: [{
             label: '# of Rides',
             data: rideMonth,
