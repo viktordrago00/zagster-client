@@ -33,7 +33,7 @@ function grabData(data) {
 
 function updateRideCount(data) {
     numberOfRides = data.count
-    $("h2#rideCount").html(numberOfRides)
+    $("h1#rideCount").html(numberOfRides)
   }
 function printData(data) {
     console.log(data)
